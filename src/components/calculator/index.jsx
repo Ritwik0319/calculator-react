@@ -5,22 +5,31 @@ class Calculator extends Component {
     input: ""
   }
   handlebtn = (value) => {
+    const operators = ["+", "-", "*", "/"];
+    let { input } = this.state;
+    if (operators.includes(value)) {
+      if (input === "") return; // don’t allow operator at start
+      if (operators.includes(input[input.length - 1])) {
+        // Replace last operator with new one
+        input = input.slice(0, -1);
+      }
+    }
     this.setState({
-      input: this.state.input + value
+      input: input + value
     })
     if (value == "=") {
       this.setState({
         input: eval(this.state.input)
       })
     }
-    if(value=="ac"){
+    if (value == "ac") {
       this.setState({
-        input:""
+        input: ""
       })
     }
-    if(value=="del"){
+    if (value == "del") {
       this.setState({
-        input:this.state.input.slice(0,-1)
+        input: this.state.input.slice(0, -1)
       })
     }
   }
@@ -58,4 +67,4 @@ class Calculator extends Component {
     )
   }
 }
-export {Calculator}
+export { Calculator }
