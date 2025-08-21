@@ -5,7 +5,7 @@ class Calculator extends Component {
     input: ""
   }
   handlebtn = (value) => {
-    const operators = ["+", "-", "*", "/"];
+    const operators = ["+", "-", "*", "/","="];
     let { input } = this.state;
     if (operators.includes(value)) {
       if (input === "") return; // don’t allow operator at start
