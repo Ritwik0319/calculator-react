@@ -19,7 +19,7 @@ class Calculator extends Component {
     })
     if (value == "=") {
       this.setState({
-        input: eval(this.state.input)
+        input: eval(input)
       })
     }
     if (value == "ac") {
@@ -29,7 +29,7 @@ class Calculator extends Component {
     }
     if (value == "del") {
       this.setState({
-        input: this.state.input.slice(0, -1)
+        input: input.slice(0, -1)
       })
     }
   }
