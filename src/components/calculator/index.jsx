@@ -29,17 +29,18 @@ class Calculator extends Component {
     }
     if (value == "del") {
       this.setState({
-        input: input.slice(0, -1)
+        input: input.slice(0,-1)
       })
     }
   }
   render() {
-    console.log(this.state.input)
+    let { input } = this.state;
+    console.log(input)
     return (
       <div className='calc'>
         <div className='calc_A'>
           <div>
-            <input type="text" readOnly value={this.state.input} />
+            <input type="text" readOnly value={input} />
           </div>
           <div className='calc_A1'>
             <button onClick={() => { this.handlebtn("ac") }} className='acbtn'>Ac</button>
