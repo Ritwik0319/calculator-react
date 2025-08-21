@@ -18,7 +18,7 @@ input {
   padding: 0 15px; /* equal left + right padding */
   font-size: 1.8rem;
   font-weight: bold;
-  background: #1e1e1e; /* soft black */
+  background: #3b3b3b; /* soft black */
   color: #f5c518; /* golden yellow */
   box-sizing: border-box; /* ensures padding doesn't break alignment */
 }

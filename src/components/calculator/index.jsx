@@ -29,7 +29,7 @@ class Calculator extends Component {
     }
     if (value == "del") {
       this.setState({
-        input: input.slice(0,-1)
+        input: input.slice(0, -1)
       })
     }
   }
