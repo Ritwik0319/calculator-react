@@ -7,6 +7,7 @@ class Calculator extends Component {
   handlebtn = (value) => {
     const operators = ["+", "-", "*", "/","="];
     let { input } = this.state;
+    console.log(input)
     if (operators.includes(value)) {
       if (input === "") return; // don’t allow operator at start
       if (operators.includes(input[input.length - 1])) {
